@@ -92,7 +92,7 @@ function App() {
     <Contenedor>
         <div>
           <Imagen src={imagen} alt="Criptomonedas" title="Criptomonedas" />
-          <Footer>Copyright © - Designed and Created by: <a href="https://www.cmurestudillos.es" target="_blank" rel="noopener noreferrer">Carlos Mur</a></Footer>
+          <Footer>Copyright © - Designed and Created by: <strong>Carlos Mur</strong></Footer>
         </div>
         <div>
             <Heading>Cotizador de Criptomonedas</Heading>
