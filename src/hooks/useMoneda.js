@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, {  useState } from 'react';
 // Estilos CSS de componentes
 import styled from '@emotion/styled';
 
@@ -30,7 +30,7 @@ const useMoneda = (label, stateInicial, opciones) => {
     const [state, actualizarState] = useState(stateInicial);
 
     const Seleccionar = () => (
-        <Fragment>
+        <>
             <Label htmlFor="moneda">{label}</Label>
             <Select id="moneda" name="moneda" onChange={ e => actualizarState(e.target.value)} value={state} >
                 <option value="">- Seleccione -</option>
@@ -38,7 +38,7 @@ const useMoneda = (label, stateInicial, opciones) => {
                     <option key={opcion.codigo} value={opcion.codigo}>{opcion.nombre}</option>
                 ))}
             </Select>
-        </Fragment>
+        </>
     );
 
     // Retornar state, interfaz y funcion que modifica el state

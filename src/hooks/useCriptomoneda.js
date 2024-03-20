@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 // Estilos CSS de componentes
 import styled from '@emotion/styled';
 
@@ -32,7 +32,7 @@ const useCriptomoneda = (label, stateInicial, opciones) => {
     const [state, actualizarState] = useState(stateInicial);
 
     const SelectCripto = () => (
-        <Fragment>
+        <>
             <Label htmlFor="criptomoneda">{label}</Label>
             <Select id="criptomoneda" name="criptomoneda" onChange={ e => actualizarState(e.target.value)} value={state} >
                 <option value="">- Seleccione -</option>
@@ -40,7 +40,7 @@ const useCriptomoneda = (label, stateInicial, opciones) => {
                     <option key={opcion.CoinInfo.Id} value={opcion.CoinInfo.Name}>{opcion.CoinInfo.FullName}</option>
                 ))}
             </Select>
-        </Fragment>
+        </>
     );
 
     // Retornar state, interfaz y fn que modifica el state
